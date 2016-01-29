@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOf-PW-JHb">
+                                <rect key="frame" x="285" y="338" width="30" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="7zP-th-9FH"/>
+                                    <constraint firstAttribute="height" constant="30" id="Yyx-jK-4vW"/>
+                                </constraints>
+                                <state key="normal" title="下载"/>
+                                <connections>
+                                    <action selector="downloadAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AOP-p4-S1t"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U8k-0U-CnH">
+                                <rect key="frame" x="149" y="280" width="303" height="2"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="2ov-9y-l9b"/>
+                                    <constraint firstAttribute="width" constant="303" id="o9w-pZ-spZ"/>
+                                </constraints>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1q-b6-LYi">
+                                <rect key="frame" x="285" y="391" width="30" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="57y-9M-KWI"/>
+                                    <constraint firstAttribute="width" constant="46" id="UrK-gL-sCl"/>
+                                </constraints>
+                                <state key="normal" title="暂停"/>
+                                <connections>
+                                    <action selector="pauseAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JVU-BQ-Eh3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpQ-Zc-OBb">
+                                <rect key="frame" x="285" y="446" width="30" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="LgQ-pd-Caf"/>
+                                    <constraint firstAttribute="height" constant="30" id="gre-qv-rx9"/>
+                                </constraints>
+                                <state key="normal" title="继续"/>
+                                <connections>
+                                    <action selector="resumeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xqT-sh-f96"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="进度：0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vn6-9B-REf">
+                                <rect key="frame" x="263" y="208" width="75" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="IR7-dq-zvg"/>
+                                    <constraint firstAttribute="height" constant="21" id="bIx-xg-IA5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vn6-9B-REf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="188" id="76Z-6A-Qg5"/>
+                            <constraint firstItem="U8k-0U-CnH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Cn-no-4Zn"/>
+                            <constraint firstItem="IOf-PW-JHb" firstAttribute="top" secondItem="U8k-0U-CnH" secondAttribute="bottom" constant="56" id="AfC-vE-prK"/>
+                            <constraint firstItem="M1q-b6-LYi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nnl-mQ-n9z"/>
+                            <constraint firstItem="gpQ-Zc-OBb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PuT-HR-or8"/>
+                            <constraint firstItem="gpQ-Zc-OBb" firstAttribute="top" secondItem="M1q-b6-LYi" secondAttribute="bottom" constant="25" id="ZPE-76-vke"/>
+                            <constraint firstItem="U8k-0U-CnH" firstAttribute="top" secondItem="Vn6-9B-REf" secondAttribute="bottom" constant="51" id="dJ1-ZF-Emf"/>
+                            <constraint firstItem="Vn6-9B-REf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jHG-Hy-gjc"/>
+                            <constraint firstItem="IOf-PW-JHb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nvZ-he-3fv"/>
+                            <constraint firstItem="M1q-b6-LYi" firstAttribute="top" secondItem="IOf-PW-JHb" secondAttribute="bottom" constant="23" id="wER-fp-JSX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressLabel" destination="Vn6-9B-REf" id="GA5-Vz-Fdh"/>
+                        <outlet property="progressView" destination="U8k-0U-CnH" id="iIn-IK-h1H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="299"/>
+        </scene>
+    </scenes>
+</document>
